@@ -16,9 +16,10 @@ class nsetSD
 {
   public:
     nsetSD( int debug);
-    int SDWrite( char dataString);
+    int SDWrite(const char* dataString);
   private:
     int _debug;
+    const int _chipSelect = BUILTIN_SDCARD;
 };
 
 #endif
