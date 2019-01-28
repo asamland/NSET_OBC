@@ -1,15 +1,16 @@
 #include <nsetSD.h>
 
-nsetSD SDcard();
+nsetSD card(1);
+String str = "hello";
+const char *file = "datalog.txt";
 
 void setup() {
-  // put your setup code here, to run once:
 
 }
 
 void loop() {
-  if(SDcard.SDWrite("hi")){
-  Serial.write("hi");
+  if(!card.SDWrite(str,file)){
+    card.SDinit();
   }
-
-}
+  delay(1000);
+ }

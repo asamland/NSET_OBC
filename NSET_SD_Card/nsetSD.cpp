@@ -4,6 +4,12 @@ nsetSD::nsetSD(int debug)
 {
   _debug = debug;
   // Open serial communications and wait for port to open:
+  SDinit();
+}
+
+void nsetSD:: SDinit(void)
+{
+  // Open serial communications and wait for port to open:
   if (_debug){
     Serial.begin(9600);
     while (!Serial);
