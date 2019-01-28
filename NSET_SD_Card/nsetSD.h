@@ -5,8 +5,8 @@ MIT License
 */
 
 
-#ifndef nsetSD_h
-#define nsetSD_h
+#ifndef __NSETSD_H__
+#define __NSETSD_H__
 
 #include "Arduino.h"
 #include "SPI.h"
@@ -15,10 +15,9 @@ MIT License
 class nsetSD
 {
   public:
-    nsetSD( int debug);
-    int SDWrite(const char* dataString);
+    nsetSD(int debug=0);
+    int SDWrite(String dataString, String filename="DATALOG.TXT")
   private:
-    int _debug;
     const int _chipSelect = BUILTIN_SDCARD;
 };
 
