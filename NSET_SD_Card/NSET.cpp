@@ -4,12 +4,12 @@ NSET::NSET(int debug)
 {
 
   // Open serial communications and wait for port to open:
+  _debug = debug;
   SDinit();
 }
 
 void NSET:: SDinit(void)
 {
-  _debug = debug;
   // Open serial communications and wait for port to open:
   if (_debug){
     Serial.begin(9600);
