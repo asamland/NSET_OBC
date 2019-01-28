@@ -16,9 +16,10 @@ class nsetSD
 {
   public:
     nsetSD(int debug=0);
-    int SDWrite(String dataString, String filename="DATALOG.TXT")
+    int SDWrite(String dataString, const char *filename="DATALOG.TXT");
   private:
     const int _chipSelect = BUILTIN_SDCARD;
+    int _debug;
 };
 
 #endif

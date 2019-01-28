@@ -4,12 +4,9 @@ nsetSD::nsetSD(int debug)
 {
   _debug = debug;
   // Open serial communications and wait for port to open:
-  if ()
-  Serial.begin(9600);
-   while (!Serial);
-
-  if (_debug)
-  {
+  if (_debug){
+    Serial.begin(9600);
+    while (!Serial);
     Serial.print("Initializing SD card...");
   }
 
@@ -28,7 +25,7 @@ nsetSD::nsetSD(int debug)
   }
 }
 
-int nsetSD:: SDWrite(String dataString, String filename)
+int nsetSD:: SDWrite(String dataString, const char *filename)
 {
    // open the file. note that only one file can be open at a time,
   // so you have to close this one before opening another.
