@@ -1,14 +1,15 @@
-#include <nsetSD.h>
+#include <NSET.h>
 
-nsetSD::nsetSD(int debug)
+NSET::NSET(int debug)
 {
-  _debug = debug;
+
   // Open serial communications and wait for port to open:
   SDinit();
 }
 
-void nsetSD:: SDinit(void)
+void NSET:: SDinit(void)
 {
+  _debug = debug;
   // Open serial communications and wait for port to open:
   if (_debug){
     Serial.begin(9600);
@@ -31,7 +32,7 @@ void nsetSD:: SDinit(void)
   }
 }
 
-int nsetSD:: SDWrite(String dataString, const char *filename)
+int NSET:: SDWrite(String dataString, const char *filename)
 {
    // open the file. note that only one file can be open at a time,
   // so you have to close this one before opening another.

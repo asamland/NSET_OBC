@@ -5,17 +5,17 @@ MIT License
 */
 
 
-#ifndef __NSETSD_H__
-#define __NSETSD_H__
+#ifndef __NSET_H__
+#define __NSET_H__
 
 #include "Arduino.h"
 #include "SPI.h"
 #include "SD.h"
 
-class nsetSD
+class NSET
 {
   public:
-    nsetSD(int debug=0);
+    NSET(int debug=0);
     void SDinit(void);
     int SDWrite(String dataString, const char *filename="DATALOG.TXT");
   private:
