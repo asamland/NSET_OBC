@@ -1,9 +1,9 @@
-#include <NSET.h>
+#include <nsetSD.h>
 
 nsetSD::nsetSD(int debug)
 {
 
-  // Open serial communications and wait for port to open:
+
   _debug = debug;
   SDinit();
 }

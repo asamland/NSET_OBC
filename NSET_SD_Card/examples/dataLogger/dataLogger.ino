@@ -1,6 +1,6 @@
 #include <nsetSD.h>
 
-NSET card(1);
+nsetSD card(1);
 String str = "hello";
 const char *file = "datalog.txt";
 
