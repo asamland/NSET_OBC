@@ -1,6 +1,6 @@
 #include <NSET.h>
 
-NSET::NSET(int debug)
+nsetSD::nsetSD(int debug)
 {
 
   // Open serial communications and wait for port to open:
@@ -8,7 +8,7 @@ NSET::NSET(int debug)
   SDinit();
 }
 
-void NSET:: SDinit(void)
+void nsetSD:: SDinit(void)
 {
   // Open serial communications and wait for port to open:
   if (_debug){
@@ -32,7 +32,7 @@ void NSET:: SDinit(void)
   }
 }
 
-int NSET:: SDWrite(String dataString, const char *filename)
+int nsetSD:: SDWrite(String dataString, const char *filename)
 {
    // open the file. note that only one file can be open at a time,
   // so you have to close this one before opening another.
